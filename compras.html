@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compras - EquipRent</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script> <!-- Agregamos el script -->
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Mis Compras</h1>
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="compras.html">Compras</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección de compras -->
+    <section class="purchases" aria-label="Compras realizadas">
+        <h2>Tus Compras</h2>
+        <ul id="lista-compras"></ul>
+        <h3>Total: $<span id="total-precio">0</span></h3>
+        
+        <!-- Botón de finalizar compra -->
+        <button id="finalizar-compra" onclick="finalizarCompra()">Finalizar Compra</button>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 EquipRent. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Función para mostrar los productos en la página de compras
+        function mostrarCarrito() {
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            let listaCompras = document.getElementById("lista-compras");
+            let totalPrecio = 0;
+
+            // Limpiar el contenido previo
+            listaCompras.innerHTML = "";
+
+            // Recorrer el carrito y agregar los elementos al DOM
+            carrito.forEach(producto => {
+                let li = document.createElement("li");
+                li.textContent = `${producto.nombre} - $${producto.precio}`;
+                listaCompras.appendChild(li);
+
+                // Sumar al total
+                totalPrecio += producto.precio;
+            });
+
+            // Actualizar el total
+            document.getElementById("total-precio").textContent = totalPrecio;
+        }
+
+        // Función para finalizar la compra
+        function finalizarCompra() {
+            // Mostrar una alerta de éxito
+            alert("Compra finalizada con éxito");
+
+            // Vaciar el carrito de Local Storage
+            localStorage.removeItem("carrito");
+
+            // Limpiar la lista de compras en la página
+            document.getElementById("lista-compras").innerHTML = "";
+            document.getElementById("total-precio").textContent = "0";
+        }
+
+        // Llamar a la función cuando se carga la página
+        document.addEventListener("DOMContentLoaded", mostrarCarrito);
+    </script>
+
+</body>
+</html>

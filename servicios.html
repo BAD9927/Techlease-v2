@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - EquipRent</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script> <!-- Agregamos el script -->
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Servicios de EquipRent</h1>
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="compras.html">Compras</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <!-- Sección de servicios -->
+    <section class="services" aria-label="Nuestros servicios">
+
+        <!-- Alquiler de Equipos -->
+        <div class="service-section">
+            <h2>Alquiler de Equipos para Empresas</h2>
+            <img src="img/alquiler.jpg" alt="Alquiler de Equipos" class="service-image">
+            <p>Ofrecemos planes de alquiler de equipos para empresas según las necesidades tecnológicas de cada cliente.</p>
+            
+            <h3>Planes:</h3>
+            <ul>
+                <li><strong>Plan Básico:</strong> Desde 5 hasta 10 computadores corporativos.</li>
+                <li><strong>Plan Premium:</strong> Desde 15 hasta 20 computadores corporativos, con servicio técnico 24/7 incluido.</li>
+            </ul>
+            <!-- Botón para agregar al carrito -->
+            <button onclick="agregarAlCarrito('Alquiler de Computadoras - Plan Básico', 150000)">Solicitar ¡YA! - Básico</button>
+            <button onclick="agregarAlCarrito('Alquiler de Computadoras - Plan Premium', 250000)">Solicitar ¡YA! - Premium</button>
+        </div>
+
+        <!-- Alquiler de Impresoras -->
+        <div class="service-section">
+            <h2>Alquiler de Impresoras</h2>
+            <img src="img/impresoras.jpg" alt="Alquiler de Impresoras" class="service-image">
+            <p>Nuestro servicio de alquiler de impresoras está diseñado para empresas que buscan optimizar sus recursos.</p>
+            
+            <h3>Planes:</h3>
+            <ul>
+                <li><strong>Plan Básico:</strong> Desde 5 hasta 10 impresoras multifuncionales.</li>
+                <li><strong>Plan Premium:</strong> Desde 15 hasta 20 impresoras multifuncionales, con servicio técnico 24/7 incluido.</li>
+            </ul>
+            <!-- Botón para agregar al carrito -->
+            <button onclick="agregarAlCarrito('Alquiler de Impresoras - Plan Básico', 100000)">Solicitar ¡YA! - Básico</button>
+            <button onclick="agregarAlCarrito('Alquiler de Impresoras - Plan Premium', 200000)">Solicitar ¡YA! - Premium</button>
+        </div>
+
+        <!-- Servicio Técnico -->
+        <div class="service-section">
+            <h2>Servicio Técnico</h2>
+            <img src="img/servicio tecnico.jpg" alt="Servicio Técnico" class="service-image">
+            <p>Contamos con un equipo especializado en soporte técnico para atender todas tus necesidades.</p>
+            
+            <h3>Servicios Incluidos:</h3>
+            <ul>
+                <li>Mantenimiento preventivo y correctivo.</li>
+                <li>Instalación de software y actualizaciones.</li>
+                <li>Soporte técnico en sitio y remoto.</li>
+                <li>Atención 24/7 para clientes premium.</li>
+            </ul>
+            <!-- Botón para agregar al carrito -->
+            <button onclick="agregarAlCarrito('Servicio Técnico - Plan Básico', 50000)">Solicitar ¡YA! - Básico</button>
+            <button onclick="agregarAlCarrito('Servicio Técnico - Plan Premium', 100000)">Solicitar ¡YA! - Premium</button>
+        </div>
+
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 EquipRent. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

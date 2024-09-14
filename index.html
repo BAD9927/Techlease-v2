@@ -1,0 +1,67 @@
+<!-- HTML de la Página de Inicio (index.html) -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechLease - Alquiler de Equipos y Servicios Técnicos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>TechLease - Alquiler de Equipos y Servicios Técnicos</h1>
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="compras.html">Compras</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Servicios -->
+    <section class="services" id="servicios" aria-label="Nuestros servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="service-list">
+            <div class="service-item">
+                <img src="img/alquiler.jpg" alt="Alquiler de Computadoras">
+                <h3>Alquiler de Computadoras</h3>
+                <p>Disponemos de una amplia gama de equipos de cómputo.</p>
+                <button onclick="window.location.href='servicios.html'">Consultar</button>
+            </div>
+            <div class="service-item">
+                <img src="img/impresoras.jpg" alt="Alquiler de Impresoras">
+                <h3>Alquiler de Impresoras</h3>
+                <p>Alquiler de impresoras de última tecnología para tu negocio.</p>
+                <button onclick="window.location.href='servicios.html'">Consultar</button>
+            </div>
+            <div class="service-item">
+                <img src="img/servicio tecnico.jpg" alt="Servicio Técnico">
+                <h3>Servicio Técnico</h3>
+                <p>Servicio técnico especializado para equipos de cómputo e impresoras.</p>
+                <button onclick="window.location.href='servicios.html'">Consultar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section class="contact" id="contacto" aria-label="Sección de contacto">
+        <h2>Contáctanos</h2>
+        <p>¿Necesitas más información? Contáctanos por correo o teléfono.</p>
+        <p>Teléfono: <a href="tel:+573001234567">+57 300 123 4567</a></p>
+        <p>Email: <a href="mailto:info@equiprent.com">info@equiprent.com</a></p>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 EquipRent. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
